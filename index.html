@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
     <!-- HTML Meta Tags -->
     <title>Taming.io News</title>
     <meta name="description" content="The latest news, updates, and more on Taming.io!">
@@ -27,7 +28,16 @@
     <header>
         <a href="https://taming.io/"><img src="logo.png" alt="Taming.io Logo"></a>
         <nav>
+            <input type="checkbox" id="sidebar-active">
+            <label for="sidebar-active" class="sidebar-btn">
+                <img src="menu-btn.png">
+            </label>
+
+            <label id="overlay" for="sidebar-active"></label>
             <ul class="nav__links">
+                <label for="sidebar-active" class="sidebar-close-btn">
+                    <img src="close-btn.png">
+                </label>
                 <li><a href="#">HOW TO REDUCE LAGS</a></li>
                 <li><a href="#">HOW TO PLAY</a></li>
                 <li><a href="#">NEWS</a></li>
@@ -36,7 +46,6 @@
                 <li><a href="#">GAMES</a></li>
             </ul>
         </nav>
-        <div></div>
     </header>
 
     <div class="flex-container">
