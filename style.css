@@ -58,7 +58,7 @@ header a img {
 /* FLEX CONTAINER */
 .flex-container {
     display: grid;
-    grid-template-columns: 900px 350px;
+    grid-template-columns: 900px auto;
     justify-content: left;
     margin-top: 20px;
 }
@@ -97,22 +97,25 @@ header a img {
 
 /* NEWS IMAGE */
 .new img {
-    height: inherit;
+    width: 500px;
     object-fit: cover;
 }
 
 /* NEWS DESCRIPTION */
 .desc {
     padding: 10px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 100%;
     text-align: center;
     gap: 15px;
-    width: 90%;
+    width: 290px;
     height: 200px;
 }
 
 .date {
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
     color: #ffe5c1;
     background-color: #3b332b;
     border-radius: 5px;
@@ -120,6 +123,7 @@ header a img {
 }
 
 .blue {
+    text-align: center;
     color: #ffe5c1;
     font-size: 1.25rem;
     background-color: #38c5c1;
@@ -183,6 +187,7 @@ header a img {
 
 /* NEW TYPE SECTION */
 .new-type {
+    text-align: center;
     color: #ffe5c1;
     display: flex;
     align-items: center;
@@ -203,6 +208,7 @@ header a img {
 
 
 .new-description {
+    text-align: center;
     color: #ffe5c1;
 }
 
@@ -213,30 +219,34 @@ header a img {
 
 /* MEDIA QUERY PARA PANTALLAS PEQUEÑAS */
 @media (max-width: 768px) {
+    .flex-container {
+        grid-template-columns: auto;
+        justify-content: center;
+    }
     .new {
-        width: 100%;
-        height: 250px;
+        grid-template-columns: auto;
+        width: 395px;
+        height: 500px;
     }
 
     .new img {
         width: 100%;
-        height: inherit;
+        height: 250px;
     }
 
     .desc {
-        width: 100%;
+        width: 100%; 
     }
 
     .new-type img{
         height: 30px;
         width: auto;
     }
+    .ad {
+        display: none !important; 
+    }
 }
 
-.art-img {
-    height: 500px !important;
-    transform: translateY(-125px);
-}
 
 /* Cambia el tamaño de la scrollbar */
 ::-webkit-scrollbar {
@@ -257,10 +267,8 @@ header a img {
   }
 
 .ad {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     text-align: center;
-    align-items: center;
     grid-column: 2;
 }
 
@@ -270,7 +278,6 @@ header a img {
     height: 300px;
     border: #3b332b 5px solid;
     border-radius: 15px;
-    grid-column: 2;
 }
 
 .ad-play-webgames-io {
@@ -279,7 +286,6 @@ header a img {
     height: 250px;
     border: #3b332b 5px solid;
     border-radius: 15px;
-    grid-column: 2;
 }
 
 .ad-play-taming-io:hover {
