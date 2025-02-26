@@ -75,8 +75,7 @@ header a img {
 
 /* NEWS SECTION */
 .news-container {
-    width: 110%;
-    max-width: 900px;
+    max-width: 100%;
 }
 
 .new-btn {
@@ -100,15 +99,15 @@ header a img {
     border: 5px solid #3b332b;
     border-radius: 10px;
     width: 90%;
-    height: 250px;
+    height: fit-content;
     overflow: hidden;
     box-shadow: 5px 5px 5px rgb(0, 0, 0, .2);
 }
 
 /* NEWS IMAGE */
 .new img {
-    max-width: 500px;
-    height: auto;
+    max-width: 90%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -231,7 +230,7 @@ header a img {
 }
 
 /* MEDIA QUERY PARA PANTALLAS PEQUEÑAS */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     body {
         font-size: 0.75rem;
     }
@@ -347,10 +346,10 @@ header a img {
 }
 
 footer {
-    bottom: 0;
     background-color: #3b332b;
     border-radius: 10px;
     padding: 10px;
+    margin-bottom: 8px;
 }
 
 .copyright a img{
